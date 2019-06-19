@@ -5,4 +5,7 @@ Apicella Andrea <br />
 Bersani Davide <br />
 D' Angelo Gabriele <br />
 Frillici Filippo <br />
+
+## Utilizzo
+Attenzione: le applicazioni sono pensate per girare nell'ambiente "workstation".
  
