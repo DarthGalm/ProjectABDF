@@ -1,8 +1,8 @@
 # ProjectABF
-
-Repository del progetto per il corso di Architetture dei Sistemi Software 
-Apicella Andrea
-Bersani Davide
-D' Angelo Gabriele
-Frillici Filippo
+<br />
+Repository del progetto per il corso di Architetture dei Sistemi Software <br />
+Apicella Andrea <br />
+Bersani Davide <br />
+D' Angelo Gabriele <br />
+Frillici Filippo <br />
  
