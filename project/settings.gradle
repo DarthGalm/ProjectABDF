@@ -1,0 +1,10 @@
+include 'a-service'
+include 'eureka-server'
+include 'zuul-gateway'
+
+rootProject.name = 'asw-project'
+
+
+project(':a-service').name = 'a'
+project(':eureka-server').name = 'eureka'
+project(':zuul-gateway').name = 'zuul'
