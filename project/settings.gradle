@@ -1,10 +1,12 @@
 include 'a-service'
 include 'eureka-server'
 include 'zuul-gateway'
+include 'c-service'
 
 rootProject.name = 'asw-project'
 
 
 project(':a-service').name = 'a'
+project(':c-service').name = 'c'
 project(':eureka-server').name = 'eureka'
 project(':zuul-gateway').name = 'zuul'
