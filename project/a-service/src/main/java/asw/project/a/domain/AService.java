@@ -17,6 +17,8 @@ public class AService {
 	@Autowired
 	CService cService;
 	
+	@Autowired
+	BService bService;
 	
 	private String getAnimal() {
 		/* restituisce un animale a caso */ 
@@ -31,7 +33,7 @@ public class AService {
 		sb.append(instanceName);
 		sb.append(": ");
 		sb.append(this.getAnimal());
-		cService.saveAnimal(sb.toString());
+		bService.saveAnimal(sb.toString());
 	}
 
 	public String getAnimals() {

@@ -1,4 +1,4 @@
-package asw.project.a.cservice;
+package asw.project.b.cservice;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,9 +6,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @FeignClient("c")
 public interface CClient {
-	/*@RequestMapping(value="/", method=RequestMethod.POST)
-	public void saveAnimal(String message);*/
-	
-	@RequestMapping(value="/", method=RequestMethod.GET)
-	public String getAnimals();
+	@RequestMapping(value="/", method=RequestMethod.POST)
+	public void saveAnimal(String message);
 }
