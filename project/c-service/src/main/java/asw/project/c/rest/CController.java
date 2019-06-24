@@ -14,7 +14,7 @@ import asw.project.c.domain.CService;
 public class CController {
 
 	@Autowired 
-	private CService CService;
+	private CService cService;
 
 	private final Logger logger = Logger.getLogger(CController.class.toString()); 
 	
@@ -22,13 +22,13 @@ public class CController {
 	@PostMapping("/")
 	public void saveAnimal(@RequestBody String name) {
 		logger.info("Inserisco nuovo animale.");
-		this.CService.saveAnimal(name);
+		this.cService.saveAnimal(name);
 	}
 	
 	@GetMapping("/")
 	public String getAnimals() {
 		logger.info("Prendo tutti gli animali.");
-		return this.CService.getAnimals();
+		return this.cService.getAnimals();
 	}
 	
 }

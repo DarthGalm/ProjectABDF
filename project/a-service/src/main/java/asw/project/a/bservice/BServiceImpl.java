@@ -1,12 +1,12 @@
 package asw.project.a.bservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import asw.project.a.domain.AMessagePublisher;
 import asw.project.a.domain.BService;
 
-@Component
+@Service
 public class BServiceImpl implements BService{
 	
 	@Autowired

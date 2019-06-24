@@ -10,13 +10,6 @@ public class CServiceImpl implements CService{
 
 	@Autowired 
 	private CClient cClient;
-	
-	
-	/*@Override
-	public void saveAnimal(String message) {
-		cClient.saveAnimal(message);
-	}*/
-
 
 	@Override
 	public String getAnimals() {

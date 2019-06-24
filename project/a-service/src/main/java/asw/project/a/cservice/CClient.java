@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @FeignClient("c")
 public interface CClient {
-	/*@RequestMapping(value="/", method=RequestMethod.POST)
-	public void saveAnimal(String message);*/
 	
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String getAnimals();
