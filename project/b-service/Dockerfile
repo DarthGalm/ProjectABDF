@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y curl
 ADD build/libs/b.jar b.jar
 
 #check this port 8080
-EXPOSE 8761
+#EXPOSE 8761
 
 ENTRYPOINT ["java", "-Xmx128m", "-Xms128m", "-jar", "b.jar"]
 
