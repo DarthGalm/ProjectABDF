@@ -6,7 +6,7 @@ FROM openjdk:8-jdk
 
 RUN apt-get update && apt-get install -y curl
 
-ADD build/libs/cservice.jar cservice.jar
+ADD build/libs/c.jar c.jar
 
 #check this port 8080
 EXPOSE 8761

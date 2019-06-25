@@ -6,7 +6,7 @@ FROM openjdk:8-jdk
 
 RUN apt-get update && apt-get install -y curl
 
-ADD build/libs/bservice.jar bservice.jar
+ADD build/libs/b.jar b.jar
 
 #check this port 8080
 EXPOSE 8761
