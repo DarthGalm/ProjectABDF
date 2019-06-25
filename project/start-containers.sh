@@ -13,7 +13,8 @@ fi
 
 # Script per avviare Kafka con Docker Compose
 
-echo Starting Kafka...
+echo Bulding Images with Docker Compose
 
 # docker-compose up -d zookeeper kafka
-docker-compose up -d 
+# docker-compose up -d commented
+docker-compose build

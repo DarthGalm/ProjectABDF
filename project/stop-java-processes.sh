@@ -2,4 +2,4 @@
 
 echo Killing all running java processes  
 
-pkill -f 'java'
+gradle clean 

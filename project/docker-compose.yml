@@ -1,9 +1,42 @@
 version: '3'
 services:
+  eureka:
+     build: 
+        context: ./eureka-server
+     ports:
+           - "8761:8761"
+     container_name: eureka 
+  aservice:
+      build: 
+        context: ./a-service
+      depends_on:
+        - "eureka"
+#      environment: #check
+  bservice:
+      build: 
+        context: ./b-service
+      depends_on:
+        - "eureka"
+#      environment: #check
+  cservice:
+      build: 
+        context: ./c-service
+      depends_on:
+        - "eureka"
+#      environment:#check 
+  zuul:
+      build: 
+        context: ./zuul-gateway
+      container_name: zuul 
+      ports:
+      - "8080:8080"
+      depends_on:
+        - "eureka" 
+#######################  
   zookeeper:
-    image: wurstmeister/zookeeper
-    ports:
-      - "2181:2181"
+        image: wurstmeister/zookeeper
+        ports:
+        - "2181:2181"
   kafka:
     image: wurstmeister/kafka:latest
     depends_on:
@@ -27,36 +60,3 @@ services:
 #      LOG4J_LOGGER_KAFKA_AUTHORIZER_LOGGER: DEBUG
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-#######################
-  eureka:
-      build: 
-        context: ./eureka-server
-      container_name: eureka 
-      ports:
-      - "8761:8761"
-    aservice:
-      build: 
-        context: ./a-service
-      depends_on:
-        - "eureka"
-#      environment: #check
-    bservice:
-      build: 
-        context: ./b-service
-      depends_on:
-        - "eureka"
-#      environment: #check
-    cservice:
-      build: 
-        context: ./c-service
-      depends_on:
-        - "eureka"
-#      environment:#check 
-    zuul:
-      build: 
-        context: ./zuul-gateway
-      container_name: zuul 
-      ports:
-      - "8080:8080"
-      depends_on:
-        - "eureka"   
