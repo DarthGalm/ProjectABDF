@@ -8,6 +8,3 @@ gradle build
 
 echo Building docker images
 docker-compose build
-
-echo Launching containers
-docker-compose up
