@@ -18,12 +18,12 @@ public class BMessageListener {
 	private String channel;
 	
 	@Value("${asw.kafka.groupid}")
-	private String groupId;
+	private String groupid;
 	
 	@Autowired
 	BConsumerService bConsumerService;
 	
-	@KafkaListener(topics = "${asw.kafka.channel.in}", groupId = "${asw.kafka.groupId}")
+	@KafkaListener(topics = "${asw.kafka.channel.in}", groupId = "${asw.kafka.groupid}")
 	public void listen(ConsumerRecord<String,String> record) throws Exception {
 		String message = record.value();
 		bConsumerService.onMessage(message);
