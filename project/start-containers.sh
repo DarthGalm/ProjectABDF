@@ -17,4 +17,4 @@ echo Bulding Images with Docker Compose
 
 # docker-compose up -d zookeeper kafka
 # docker-compose build ridondante 
-docker-compose up -d
+docker-compose up -d --build
