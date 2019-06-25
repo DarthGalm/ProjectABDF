@@ -4,33 +4,27 @@ services:
      build: 
         context: ./eureka-server
      container_name: eureka 
-  a:
+  aservice:
       build: 
         context: ./a-service
       depends_on:
         - "eureka"
         - "kafka"
-      environment:
-        - instanceName=Alberto
 
 #      environment: #check
-  b:
+  bservice:
       build: 
         context: ./b-service
       depends_on:
         - "eureka"
         - "kafka"
-      environment:
-        - instanceName=Barbara
 
 #      environment: #check
-  c:
+  cservice:
       build: 
         context: ./c-service
       depends_on:
         - "eureka"
-      environment:
-        - name=Carla
 #      environment:#check 
   zuul:
       build: 

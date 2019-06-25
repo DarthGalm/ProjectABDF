@@ -18,4 +18,4 @@ server:
   port: ${PORT:${SERVER_PORT:0}}
 #  port: 8080
 animals: Orso,Leone,Antilope
-instanceName: AlbertoDefault
+instanceName: Alberto,Angelo,Anna,Andrea

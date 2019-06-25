@@ -13,6 +13,8 @@ public class AService {
 	
 	@Value("${instanceName}") 
 	private String instanceName;
+
+	private String name;
 	
 	@Autowired
 	CService cService;
@@ -30,10 +32,20 @@ public class AService {
 
 	public void insertAnimal() {
 		StringBuilder sb = new StringBuilder();
-		sb.append(instanceName);
+		if(name == null) {
+			name=getName();
+		}
+		sb.append(name);
 		sb.append(": ");
 		sb.append(this.getAnimal());
 		bService.saveAnimal(sb.toString());
+	}
+
+	private String getName() {
+		String[] wordArray = instanceName.split(",");
+		int i = (int) (Math.round(Math.random()*(wordArray.length-1)));
+		String word = wordArray[i];
+		return word; 
 	}
 
 	public String getAnimals() {
