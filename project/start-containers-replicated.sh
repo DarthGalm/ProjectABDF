@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker-compose up --scale aservice=2 --scale bservice=2 --scale cservice=2 &
+docker-compose up --scale aservice=3 --scale bservice=3 --scale cservice=3 &
