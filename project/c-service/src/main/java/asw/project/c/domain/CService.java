@@ -13,6 +13,8 @@ public class CService {
 	@Value("${name}") 
 	private String name;
 
+	private String nameSelected;
+
 	/*coppie <nome,animale> salvate */
     private List<String> lista = new ArrayList<String>();
 	
@@ -23,7 +25,17 @@ public class CService {
 
 	public String getAnimals() {
 		String finalString = String.join(",",this.lista);
-		return this.name + "  :[" + finalString +"]";
+		if(nameSelected==null) {
+			nameSelected = getName();
+		}
+		return this.nameSelected + "  :[" + finalString +"]";
+	}
+
+	private String getName() {
+		String[] wordArray = name.split(",");
+		int i = (int) (Math.round(Math.random()*(wordArray.length-1)));
+		String word = wordArray[i];
+		return word; 
 	}
 	
 }
